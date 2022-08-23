@@ -9,11 +9,11 @@ function game(){
 
 
     setInterval(()=>{
-        ctx.clearRect(0,0,400,400)
+        ctx.clearRect(0,0,450,500)
         cubano.imagen()
 
         cantpollos.forEach((pollo, index) =>{
-            console.log(cantpollos)
+           // console.log(cantpollos)
                 pollo.imagen()
                 if(pollo.x <= cubano.x+cubano.w){
                     //eliminar elemento
@@ -22,10 +22,17 @@ function game(){
                 }
             }
         )
+
+        canttenderos.forEach((tendero, index) =>{
+            console.log(canttenderos)
+                tendero.imagen()
+            }
+        )
         
 
 
       crearPollo()
+      crearTenderos()
     }, 1000 /30)
 }
 
