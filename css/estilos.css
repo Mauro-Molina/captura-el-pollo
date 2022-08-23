@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: blue;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    width: 50%;
+    height: 100vh;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container a{
+    border: 1px solid #fff;
+    margin: 15px;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .5s;
+}
+
+.container a:nth-child(1){
+    color: #fff;
+    background-color: green;
+}
+
+.container a:nth-child(2){
+    color: green;
+}
+
+.container a:nth-child(1):hover{
+    color: green;
+    background: blue;
+}
+
+.container a:nth-child(2):hover{
+    color: #fff;
+    background: green;
+}
+
+.plano{  
+    width: 50%;
+    height: 100vh;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas{
+    background-color: white;
+    margin: 40px;
+}
+
+#instrucciones{
+    background: #fff;
+    padding: 30px;
+    margin: 20px;
+}
