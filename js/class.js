@@ -28,14 +28,18 @@ class Cubano{
         //this.bottom = bottom
     }
     subir(){
-        let arriba = true
+    
+        if(  this.y > 50){
             this.y -= 120
-            if (this.y === 140){
-                this.y += 120
-            } 
+        }
+            
     }
     bajar(){
-        this.y += 120
+ 
+
+        if(  this.y < 220){
+            this.y += 120
+        }
     }
     lanzar(){
         

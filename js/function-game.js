@@ -15,6 +15,11 @@ function game(){
         cantpollos.forEach((pollo, index) =>{
             console.log(cantpollos)
                 pollo.imagen()
+                if(pollo.x <= cubano.x+cubano.w){
+                    //eliminar elemento
+                    //array.splice
+                    pollos +=1
+                }
             }
         )
         

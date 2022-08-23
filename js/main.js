@@ -1,3 +1,4 @@
+//creando pollos para unirlos al array
 function crearPollo(){
     const pollosaleatorios = Math.floor(Math.random() * 100)
     if (pollosaleatorios === 3){
