@@ -2,7 +2,7 @@ let canvas = document.getElementById('plano')
 let ctx = canvas.getContext("2d")
 
 //array
-//let cantpollos = []
+let cantpollos = []
 let canttenderos = []
 
 //imagenes
@@ -59,6 +59,11 @@ class Pollo{
     imagen(){
         ctx.fillRect(this.x, this.y, this.w, this.h)
         ctx.drawImage(this.foto, this.x, this.y, this.w, this.h)
+        if(this.nivel === "facil"){
+            this.x -= 1
+        }else{
+            this.x -= 3
+        }
     }
 }
 
