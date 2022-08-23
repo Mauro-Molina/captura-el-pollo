@@ -47,7 +47,7 @@ function crearTenderos(){
 function obtenerPuntos(pollos){
     ctx.fillStyle = "#000"
     ctx.font = "40px"
-    ctx.fillText(`Pollos: ${pollos}`, 450, 20)
+    ctx.fillText(`Pollos: ${pollos}`, 400, 20)
 }
 
 

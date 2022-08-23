@@ -9,22 +9,27 @@ function game(){
 
 
     setInterval(()=>{
-        ctx.clearRect(0,0,450,500)
+        ctx.clearRect(0,0,500,400)
         cubano.imagen()
 
         cantpollos.forEach((pollo, index) =>{
-           // console.log(cantpollos)
+        // console.log(pollo)
                 pollo.imagen()
-                if(pollo.x <= cubano.x+cubano.w){
-                    //eliminar elemento
-                    //array.splice
-                    pollos +=1
+                if(pollo.x <= cubano.x+cubano.w &&
+                    pollo.x >= cubano.x &&
+                    pollo.y <= cubano.y + cubano.h &&
+                    pollo.y >= cubano.y){
+                         cantpollos.splice(index, 1)
+                    pollos += 1
+                    console.log(pollos)
+                    
                 }
+               
             }
         )
-
+        obtenerPuntos(pollos)
         canttenderos.forEach((tendero, index) =>{
-            console.log(canttenderos)
+         //   console.log(canttenderos)
                 tendero.imagen()
             }
         )

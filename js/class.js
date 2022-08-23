@@ -24,8 +24,6 @@ class Cubano{
         this.h = h
         this.vida = vida
         this.foto  = foto
-        //this.top = top
-        //this.bottom = bottom
     }
     subir(){
     
