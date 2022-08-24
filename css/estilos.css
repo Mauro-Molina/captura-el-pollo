@@ -79,6 +79,7 @@ html{
 canvas{
     background-color: white;
     margin: 40px;
+    border: 1px solid #000;
 }
 
 #instrucciones{

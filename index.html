@@ -14,25 +14,34 @@
         <img src="image/inicio.png" alt="holaa" width="130px" height="140px">
     </div>
     <div class="container">
-        <a href="game.html">Iniciar Juego</a>
-        <a href="#instrucciones">instrucciones</a>
+        <a href="game.html">Play Game</a>
+        <a href="#instrucciones">Instructiones</a>
     </div>
 </div>
     <div id="instrucciones">
-        <h4>INSTRUCCIONES</h4>
+        <h4>INSTRUCTIONES</h4>
         <p>Hola, el objetivo de este juego es representar de una manera abstracta parte del dia a dia de un cubano.
             Para jugar debe dezlizar su jugador de tal manera que el mismo valla recojiendo pollos, los pollos dan puntos, si logra obtener 20 Pollos habra ganado el juego.
             Durante el juego saldran tenderos, trata de huir de ellos para que no te roben los pollos.<br>
             Suerte! 
         </p>
         <br><br><br>
-        <h4 class="controls">CONTROLES</h4>
+        <h4 class="controls">CONTROLS</h4>
         <img src="image/controles.png" alt="controles">
         <h4 class="copy">Creado por <span>:Mauro Molina Mazon</span></h4>
         <p></p>
     </div>
-    <div class="plano" id="game"> 
-        <canvas id="plano" width="500px" height="400px"></canvas>
+    <div class="plano"> 
+        <div class="play-stop">
+            <button class="play" id="play">Play</button>
+            <button class="stop" id="stop">Stop</button>
+        </div>
+        <canvas id="plano" width="800px" height="500px"></canvas>
     </div>
+
+    <script src="js/class.js"></script>
+    <script src="js/controls.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/function-game.js"></script>
 </body>
 </html>

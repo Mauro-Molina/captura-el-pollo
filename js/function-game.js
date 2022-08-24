@@ -45,11 +45,16 @@ function game(){
             }
         )
         
-
+        let stop = document.getElementById("stop")
+        stop.addEventListener("click", () =>{
+            clearInterval(intervalo)
+            musica.pause()
+        })
 
       crearPollo()
       crearTenderos()
     }, 1000 /30)
 }
 
-game()
+
+

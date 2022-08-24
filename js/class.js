@@ -1,7 +1,15 @@
 //Crear pista de audio
 const musica = new Audio('../audio/touch-house.mp3')
-musica.play()
 //musica.loop = true
+
+let start = document.getElementById("play")
+
+start.addEventListener("click", () =>{
+    
+    musica.play()
+    clearInterval()
+    game()
+})
 
 
 //Seleccionar el canvas
