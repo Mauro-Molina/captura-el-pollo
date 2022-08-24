@@ -22,7 +22,7 @@ body{
     margin: auto;
     display: flex;
     justify-content: center;
-    align-items: center;
+    *align-items: center;
 }
 
 .container a{
@@ -32,6 +32,7 @@ body{
     text-decoration: none;
     text-transform: uppercase;
     transition: all .5s;
+    height: 50px;
 }
 
 .container a:nth-child(1){
@@ -69,7 +70,32 @@ canvas{
 }
 
 #instrucciones{
-    background: #fff;
-    padding: 30px;
-    margin: 20px;
+    background: rgba(0, 0, 0, .5);
+    background-attachment: fixed;
+    padding: 50px;
+    margin: 20px 0 0 0;
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 30px;
+}
+
+.logo img {
+    margin-top: 15px;
+}
+
+#instrucciones p, #instrucciones h4{
+    font-family: sans-serif;
+    color: #fff;
+}
+
+#instrucciones h4{
+    font-size: 30px;
+    margin-bottom: 20px;
+    *text-transform: uppercase;
 }

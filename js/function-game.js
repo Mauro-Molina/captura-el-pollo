@@ -9,20 +9,19 @@ function game(){
 
 
     setInterval(()=>{
-        ctx.clearRect(0,0,500,400)
+        ctx.clearRect(0,0,800,600)
         cubano.imagen()
 
         cantpollos.forEach((pollo, index) =>{
         // console.log(pollo)
                 pollo.imagen()
-                if(pollo.x <= cubano.x+cubano.w &&
-                    pollo.x >= cubano.x &&
-                    pollo.y <= cubano.y + cubano.h &&
-                    pollo.y >= cubano.y){
-                         cantpollos.splice(index, 1)
-                    pollos += 1
-                    console.log(pollos)
-                    
+                if(pollo.x <= cubano.x+cubano.w && pollo.x >= cubano.x && pollo.y <= cubano.y + cubano.h && pollo.y >= cubano.y){
+                    cantpollos.splice(index, 1)
+                    pollos += 2
+                    if (pollos > 20){
+                        alert("Ha ganado el juego")
+                    }
+                   
                 }
                
             }
@@ -31,6 +30,16 @@ function game(){
         canttenderos.forEach((tendero, index) =>{
          //   console.log(canttenderos)
                 tendero.imagen()
+                if (tendero.x <= cubano.x + cubano.w && tendero.x >= cubano.x && tendero.y <= cubano.y + cubano.h && tendero.y >= cubano.y){
+                    canttenderos.splice(index, 1)
+                    
+                    if (pollos > 0 && pollos > 5){
+                        pollos -=5
+
+                    }else{
+                        alert("Game Over")
+                    }
+                } 
             }
         )
         

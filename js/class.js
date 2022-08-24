@@ -1,3 +1,10 @@
+//Crear pista de audio
+const musica = new Audio('../audio/touch-house.mp3')
+musica.play()
+//musica.loop = true
+
+
+//Seleccionar el canvas
 let canvas = document.getElementById('plano')
 let ctx = canvas.getContext("2d")
 
@@ -26,21 +33,28 @@ class Cubano{
         this.foto  = foto
     }
     subir(){
-    
         if(  this.y > 50){
             this.y -= 120
         }
             
     }
-    bajar(){
- 
 
+    irAdelante(){
+        if ( this.x < 650){
+            this.x += 120
+        }
+    }
+
+    bajar(){
         if(  this.y < 220){
             this.y += 120
         }
     }
-    lanzar(){
-        
+
+    irAtras(){
+        if (this.x > 50){
+            this.x -= 120
+        }
     }
     imagen(){
         ctx.fillRect(this.x, this.y, this.w, this.h)
