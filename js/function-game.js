@@ -8,7 +8,7 @@ function game(){
     cubano.imagen()//poner foto al objeto
 
 
-    setInterval(()=>{
+    let intervalo = setInterval(()=>{
         ctx.clearRect(0,0,800,600)
         cubano.imagen()
 
@@ -19,6 +19,7 @@ function game(){
                     cantpollos.splice(index, 1)
                     pollos += 2
                     if (pollos > 20){
+                        clearInterval(intervalo)
                         alert("Ha ganado el juego")
                     }
                    
@@ -38,6 +39,7 @@ function game(){
 
                     }else{
                         alert("Game Over")
+                        clearInterval(intervalo)
                     }
                 } 
             }

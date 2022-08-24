@@ -35,8 +35,7 @@ class Cubano{
     subir(){
         if(  this.y > 50){
             this.y -= 120
-        }
-            
+        }    
     }
 
     irAdelante(){
@@ -56,12 +55,11 @@ class Cubano{
             this.x -= 120
         }
     }
+
     imagen(){
         ctx.fillRect(this.x, this.y, this.w, this.h)
         ctx.drawImage(this.foto, this.x, this.y, this.w, this.h)
-    }
-    morirse(){}
-    
+    } 
 }
 
 class Pollo{
