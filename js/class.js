@@ -34,7 +34,7 @@ let canttenderos = []
 
 //imagenes
 //const imgCubano = new Image()
-//imgCubano.src = "../image/personaje.jpg"
+//imgCubano.src = "./image/personaje.jpg"
 
 const imgPollo = new Image()
 imgPollo.src = "./image/pollo.jpg"
