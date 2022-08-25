@@ -10,12 +10,12 @@ function game(){
 
     let intervalo = setInterval(()=>{
         ctx.clearRect(0,0,800,600)
-       /* cubano.imagen = arrGif[posicion]
+        cubano.foto = arrGif[posicion]
         posicion++
         if(posicion === 27){
             posicion = 0
-        }*/
-        //cubano.imagen()
+        }
+        cubano.imagen()
 
         cantpollos.forEach((pollo, index) =>{
         // console.log(pollo)
