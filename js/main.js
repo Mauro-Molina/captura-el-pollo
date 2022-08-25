@@ -48,7 +48,7 @@ function obtenerPuntos(pollos){
     ctx.fillStyle = "#000"
     ctx.font = "30px Verdana"
     ctx.fillText(`Pollos: ${pollos}`, 430, 35)
-    ctx.fillText(`Distancia 0`, 600, 35)
+    //ctx.fillText(`Distancia 0`, 600, 35)
 }
 
 

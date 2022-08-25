@@ -3,24 +3,33 @@ function game(){
     let pollos = 0
     obtenerPuntos(pollos)//llamar a la funcion puntos  
 
-    const cubano = new Cubano(50, 250, 50, 150, 100, imgCubano)//crear el objeto cubano
+    const cubano = new Cubano(50, 250, 180, 180, 100, uno)//crear el objeto cubano
     control(cubano)//llamar a los  controles
     cubano.imagen()//poner foto al objeto
 
 
     let intervalo = setInterval(()=>{
         ctx.clearRect(0,0,800,600)
-        cubano.imagen()
+       /* cubano.imagen = arrGif[posicion]
+        posicion++
+        if(posicion === 27){
+            posicion = 0
+        }*/
+        //cubano.imagen()
 
         cantpollos.forEach((pollo, index) =>{
         // console.log(pollo)
                 pollo.imagen()
-                if(pollo.x <= cubano.x+cubano.w && pollo.x >= cubano.x && pollo.y <= cubano.y + cubano.h && pollo.y >= cubano.y){
+                if(pollo.x <= cubano.x+cubano.w && 
+                    pollo.x >= cubano.x && 
+                    pollo.y <= cubano.y + cubano.h && 
+                    pollo.y >= cubano.y){
                     cantpollos.splice(index, 1)
                     pollos += 2
                     if (pollos > 20){
                         clearInterval(intervalo)
                         alert("Ha ganado el juego")
+                        musica.pause()
                     }
                    
                 }
@@ -31,7 +40,10 @@ function game(){
         canttenderos.forEach((tendero, index) =>{
          //   console.log(canttenderos)
                 tendero.imagen()
-                if (tendero.x <= cubano.x + cubano.w && tendero.x >= cubano.x && tendero.y <= cubano.y + cubano.h && tendero.y >= cubano.y){
+                if (tendero.x <= cubano.x + cubano.w-60 && 
+                    tendero.x >= cubano.x-10 && 
+                    tendero.y <= cubano.y + cubano.h-60 && 
+                    tendero.y >= cubano.y-10){
                     canttenderos.splice(index, 1)
                     
                     if (pollos > 0 && pollos > 5){
@@ -40,6 +52,7 @@ function game(){
                     }else{
                         alert("Game Over")
                         clearInterval(intervalo)
+                        musica.pause()
                     }
                 } 
             }
