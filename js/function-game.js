@@ -66,6 +66,17 @@ function game(){
                             modalLost.style.visibility = "hidden"
                             modalLost.style.opacity = 0
                         });
+
+                        reanudar.addEventListener("click", () =>{
+                            modalLost.style.visibility = "hidden"
+                            modalLost.style.opacity = 0
+                            cabecera.style.display = 'none'
+                            instrucciones.style.display = 'none'
+                            musica.play()
+                            clearInterval()
+                            game()
+                        })
+                        
                         clearInterval(intervalo)
                         musica.pause()
                     }
