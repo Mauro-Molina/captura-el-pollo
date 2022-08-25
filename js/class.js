@@ -6,6 +6,13 @@ let start = document.getElementById("play")
 let cabecera = document.getElementById("cabecera")
 let instrucciones = document.getElementById("instrucciones")
 
+
+//Seleccionando los id de los modales
+const modalWin = document.querySelector(".modal-win");
+const closeWin = document.querySelector(".close-win");
+const modalLost = document.querySelector(".modal-lost");
+const closeLost = document.querySelector(".close-lost");
+
 start.addEventListener("click", () =>{
     cabecera.style.display = 'none'
     instrucciones.style.display = 'none'

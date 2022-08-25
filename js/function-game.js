@@ -26,9 +26,17 @@ function game(){
                     pollo.y >= cubano.y){
                     cantpollos.splice(index, 1)
                     pollos += 2
-                    if (pollos > 20){
+                    if (pollos > 10){
                         clearInterval(intervalo)
-                        alert("Ha ganado el juego")
+                      
+                        modalWin.style.visibility = "visible"
+                        modalWin.style.opacity = 1
+
+                        closeWin.addEventListener("click", ()=>{
+                            modalWin.style.visibility = "hidden"
+                            modalWin.style.opacity = 0
+                        });
+                        
                         musica.pause()
                     }
                    
@@ -50,7 +58,14 @@ function game(){
                         pollos -=5
 
                     }else{
-                        alert("Game Over")
+                        
+                        modalLost.style.visibility = "visible"
+                        modalLost.style.opacity = 1
+
+                        closeLost.addEventListener("click", ()=>{
+                            modalLost.style.visibility = "hidden"
+                            modalLost.style.opacity = 0
+                        });
                         clearInterval(intervalo)
                         musica.pause()
                     }
