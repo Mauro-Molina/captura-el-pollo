@@ -18,12 +18,12 @@ function game(){
         cubano.imagen()
 
         cantpollos.forEach((pollo, index) =>{
-        // console.log(pollo)
+     
                 pollo.imagen()
-                if(pollo.x <= cubano.x+cubano.w && 
-                    pollo.x >= cubano.x && 
-                    pollo.y <= cubano.y + cubano.h && 
-                    pollo.y >= cubano.y){
+                if(pollo.x <= cubano.x+cubano.w-60 && 
+                    pollo.x >= cubano.x-10 && 
+                    pollo.y <= cubano.y + cubano.h-60 && 
+                    pollo.y >= cubano.y-10){
                     cantpollos.splice(index, 1)
                     pollos += 2
                     if (pollos > 10){

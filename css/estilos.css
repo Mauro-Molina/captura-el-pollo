@@ -105,6 +105,13 @@ canvas{
     background-attachment: fixed;
     padding: 50px;
     *margin: 20px 0 0 0;
+    height: 750px;
+}
+
+.iniciarjuegoins{
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
 }
 
 .logo{
@@ -238,5 +245,28 @@ canvas{
 
 .close-win:hover, .close-lost:hover {
     background-color: darkgray;
+}
+
+.perdiste-title, .ganaste-title{
+    text-align: center;
+}
+
+.perdiste, .ganaste{
+    width: 200px;
+    height: 200px;
+    margin: 10px 60px;
+}
+
+#reanudar{
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #d7d7d7;
+    margin: 5px 120px;
+}
+
+#reanudar:hover{
+    background: #f3f3f3;
 }
 

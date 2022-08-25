@@ -37,7 +37,7 @@ let canttenderos = []
 //imgCubano.src = "./image/personaje.jpg"
 
 const imgPollo = new Image()
-imgPollo.src = "./image/pollo.jpg"
+imgPollo.src = "./image/pollo.png"
 
 const imgTendero = new Image()
 imgTendero.src =  "./image/tendero.jpg"

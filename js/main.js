@@ -24,7 +24,7 @@ function crearPollo(){
 function crearTenderos(){
     const tenderosAleatorios = Math.floor(Math.random() * 200)
     if (tenderosAleatorios === 3){
-        const tenderodibujado = new Pollo(1020,320,30,50, imgTendero, "facil")
+        const tenderodibujado = new Pollo(1020,320,30,50, imgTendero)
         canttenderos.push(tenderodibujado)
         tenderodibujado.imagen()
     }
