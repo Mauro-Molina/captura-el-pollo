@@ -1,4 +1,4 @@
-//function main game
+//funccion principal game
 function game(){
     let pollos = 0
     obtenerPuntos(pollos)//llamar a la funcion puntos  
@@ -17,8 +17,7 @@ function game(){
         }
         cubano.imagen()
 
-        cantpollos.forEach((pollo, index) =>{
-     
+        cantpollos.forEach((pollo, index) =>{//recorrer los array 
                 pollo.imagen()
                 if(pollo.x <= cubano.x+cubano.w-60 && 
                     pollo.x >= cubano.x-10 && 
@@ -26,7 +25,7 @@ function game(){
                     pollo.y >= cubano.y-10){
                     cantpollos.splice(index, 1)
                     pollos += 2
-                    if (pollos > 10){
+                    if (pollos >= 10){
                         clearInterval(intervalo)
                       
                         modalWin.style.visibility = "visible"
@@ -45,8 +44,7 @@ function game(){
             }
         )
         obtenerPuntos(pollos)
-        canttenderos.forEach((tendero, index) =>{
-         //   console.log(canttenderos)
+        canttenderos.forEach((tendero, index) =>{//recorrer los array
                 tendero.imagen()
                 if (tendero.x <= cubano.x + cubano.w-60 && 
                     tendero.x >= cubano.x-10 && 

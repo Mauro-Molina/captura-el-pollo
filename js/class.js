@@ -1,7 +1,8 @@
 //Crear pista de audio
 const musica = new Audio('./audio/touch-house.mp3')
-//musica.loop = true
+musica.loop = true
 
+//selecionandp los botones y secciones a usar en posteriores funciones
 let start = document.getElementById("play")
 let reanudar = document.getElementById("reanudar")
 let cabecera = document.getElementById("cabecera")
@@ -14,6 +15,7 @@ const closeWin = document.querySelector(".close-win");
 const modalLost = document.querySelector(".modal-lost");
 const closeLost = document.querySelector(".close-lost");
 
+//boton de start
 start.addEventListener("click", () =>{
     cabecera.style.display = 'none'
     instrucciones.style.display = 'none'
@@ -28,13 +30,10 @@ start.addEventListener("click", () =>{
 let canvas = document.getElementById('plano')
 let ctx = canvas.getContext("2d")
 
-//array
+//declaracion de los array
 let cantpollos = []
 let canttenderos = []
 
-//imagenes
-//const imgCubano = new Image()
-//imgCubano.src = "./image/personaje.jpg"
 
 const imgPollo = new Image()
 imgPollo.src = "./image/pollo.png"
@@ -43,7 +42,6 @@ const imgTendero = new Image()
 imgTendero.src =  "./image/tendero.jpg"
 
 //generando imagenes gif
-
 const cero = new Image()
 cero.src =  "./image/gif/0.gif"
 
@@ -181,7 +179,6 @@ class Pollo{
         this.foto = foto
     }
     imagen(){
-        ctx.fillRect(this.x, this.y, this.w, this.h)
         ctx.drawImage(this.foto, this.x, this.y, this.w, this.h)
         if(this.nivel === "facil"){
             this.x -= 1
@@ -200,7 +197,6 @@ class Tendero{
         this.foto = foto
     }
     imagen(){
-        ctx.fillRect(this.x, this.y, this.w, this.h)
         ctx.drawImage(this.foto, this.x, this.y, this.w, this.h)
     }
 }

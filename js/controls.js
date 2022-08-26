@@ -1,4 +1,4 @@
-//control
+//controles del juego
 
 function control(cubano){
     document.addEventListener("keyup", (evento) =>{

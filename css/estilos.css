@@ -5,6 +5,8 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/*-------globales-------*/
+
 html{
     scroll-behavior: smooth;
 }
@@ -12,6 +14,8 @@ html{
 a{
     text-decoration: none;
 }
+
+/*-------cabecera-------*/
 
 .cabecera{
     width: 100%;
@@ -100,6 +104,8 @@ canvas{
     border: 1px solid #000;
 }
 
+/*-------instrucciones-------*/
+
 #instrucciones{
     background: rgba(0, 0, 0, .5);
     background-attachment: fixed;
@@ -156,6 +162,8 @@ canvas{
     font-size: 20px;
 }
 
+/*-------controles-------*/
+
 .play-stop{
     position: relative;
     z-index: 1;
@@ -202,7 +210,7 @@ canvas{
     background: rgb(255, 50, 50);
 }
 
-/*--------------------------------------------------------------*/
+/*-------modales-------*/
 
 .modalales{
     position: relative;
